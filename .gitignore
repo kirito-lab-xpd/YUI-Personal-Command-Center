@@ -1,0 +1,25 @@
+# Private desktop application data
+tasks.json
+subjects.json
+study_goals.json
+fitness.json
+notes.json
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python-generated files and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# User-specific editor settings
+.vscode/
+.idea/
+
+# Local logs
+*.log
