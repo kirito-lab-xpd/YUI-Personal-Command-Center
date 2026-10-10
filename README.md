@@ -1,97 +1,68 @@
-# YUI — Personal Command Center
+# YUI — My Personal Command Center
 
-YUI is a lightweight personal productivity project with a native desktop app
-and an isolated browser demo. The desktop app keeps its existing local JSON
-workflow; the browser demo uses temporary sample data and does not read those
-files.
+## What is YUI?
+
+YUI is a personal productivity project I started because I wanted to create a place to manage different parts of my daily life. I wanted to bring my study tasks, fitness activities, notes, and other goals together instead of switching between separate tools.
+
+I'm building YUI as a project so that I can keep improving as I learn more about programming. It started as a Python program in the terminal and gradually grew into a graphical desktop interface and a web demo.
+
+## Why I Made It
+
+I'm a student, and balancing studying, fitness, personal projects, and daily tasks can be difficult. I wanted to build something efficient like an personal AI to balance them,so I created YUI, your unique intelligence to help me sort them out and track them.
+
+I also wanted to understand how a project develops from a simple idea into something people can actually try. Building YUI has gave me a chance to practice Python, work with saved data, debug errors, design an interface, and publish a project online.
+
+My plan is to keep developing YUI over time instead of treating the first version as the finished product.
+
+My goal is to get a new laptop prefferably a macbook or mavmini to help me with my ongoing projects.
 
 ## Features
 
-- **Desktop app:** Dashboard, Tasks, Study, Focus Timer, Fitness, Notes,
-  Assistant, and Settings.
-- **Terminal app:** Existing command-line entry point and offline assistant.
-- **Browser demo:** Dark dashboard with overview cards, tasks, study progress,
-  workout statistics, notes, and a simple offline Assistant panel.
-- **Privacy:** Desktop records remain local. Browser-demo edits are stored only
-  in Streamlit session state and are temporary.
+The project currently includes the following areas:
 
-The web demo does not connect to an AI service and does not require an API key.
+- **Dashboard:** A central view of productivity information.
+- **Tasks:** Organise tasks and track their completion.
+- **Study:** Keep track of subjects and study goals.
+- **Focus Timer:** Support focused work sessions.
+- **Fitness:** Record and review workout information.
+- **Notes:** Save and manage notes.
+- **Assistant:** A basic assistant interface for supported commands.
+- **Web Demo:** A browser-based version of the dashboard, built with Streamlit.
 
-## Screenshot
+Some features may differ between the desktop app and the web demo. The online demo is intended to let people explore the interface without setting up the desktop application.
 
-Add a screenshot of the browser demo here before publishing:
+## How I Built It
 
-![YUI browser demo screenshot](docs/screenshots/yui-demo.png)
+I started by building YUI in Python, using separate functions and JSON files to store information such as tasks, subjects, study goals, fitness records, and notes seperatly so it wouldn't mix up.
 
-## Run the desktop app on Windows
+As the project grew, I worked on adding more features while keeping existing ones working. I then developed a graphical interface with a dark background and purple accents. I also created a Streamlit web demo and published the source code on GitHub.
 
-From the project directory, launch the graphical app:
+## Challenges I Faced
 
-```powershell
-py gui.py
-```
+One challenge was connecting the different sections without breaking the features I had already built. I encountered Python import problems and issues with displaying information correctly in the dashboard.And due to my older version pc it was had to write the code but I eventually made the V1 of YUI.
 
-To use the existing terminal application instead:
+Another challenge was making the interface easier to use and publishing a project that originally ran on my own computer. I had to learn about Git, GitHub, dependencies, and deploying a Python web application.
 
-```powershell
-py main.py
-```
+These problems taught me to work in smaller steps, test changes before moving on, and avoid replacing working code unnecessarily.
 
-The desktop application stores private records in local JSON files. These files
-are excluded by `.gitignore`; keep them out of any public commit.
+## Technologies Used
 
-## Run the browser demo locally
+- Python
+- JSON for local data storage
+- Tkinter for the desktop interface
+- Streamlit for the web demo
+- Git and GitHub for version control and publishing
 
-Python 3.9 or newer is recommended. From the project directory:
+## Try YUI
 
-```powershell
-py -m pip install -r requirements.txt
-py -m streamlit run streamlit_app.py
-```
+**Live demo:** https://yui-kirito.streamlit.app/
 
-Streamlit prints a local URL, usually `http://localhost:8501`. All changes made
-in the demo are temporary and will reset when the session is restarted.
+**Source code:** https://github.com/kirito-lab-xpd/YUI-Personal-Command-Center
 
-`requirements.txt` is intentionally limited to the browser demo. The optional
-Shorts Creator in the existing terminal app uses Pillow and MoviePy; those
-desktop-side packages are not needed to run the Streamlit demo.
+## What's Next?
 
-## Free online demo deployment
+I want to keep improving YUI's interface, make the different sections more consistent, improve the assistant, and add on more useful features based on what I learn while developing it.
 
-One free hosting option is Streamlit Community Cloud:
+YUI is an ongoing personal project, and this version is a starting point rather than the final destination.
 
-1. Review the privacy checklist below and commit only files intended for public
-   release.
-2. Push the repository to a GitHub account/repository.
-3. Sign in to Streamlit Community Cloud with GitHub and create a new app.
-4. Select the repository and branch, set the app file to `streamlit_app.py`,
-   and deploy.
-5. Open the deployed URL and confirm the demo banner and sample data appear.
-
-The app needs no secrets or Streamlit secrets configuration. Deployment is not
-complete until the repository has been published and the hosting platform has
-successfully built the app.
-
-## Before making the repository public
-
-- Inspect the existing JSON records locally and confirm they are excluded from
-  the commit. `.gitignore` does not remove files that were already committed.
-- Review `first_yui_short.mp4` and `short_background.png` for personal or
-  licensed content and decide whether they should be included.
-- Review the complete staged file list and scan any newly added files for
-  credentials, personal information, and machine-specific paths.
-- Add a real screenshot at `docs/screenshots/yui-demo.png`, or remove the
-  placeholder above.
-- Confirm the project name, author attribution, and any third-party asset
-  licenses are appropriate for public release.
-
-## Project layout
-
-```text
-gui.py                 Tkinter desktop app
-main.py                Existing terminal app
-streamlit_app.py       Session-only browser demo
-requirements.txt       Browser-demo dependency only
-app/                   Existing application modules
-business/              Existing optional Shorts Creator
-```
+so I hope people who also stuck like me bteween study and goals can use it freely.
